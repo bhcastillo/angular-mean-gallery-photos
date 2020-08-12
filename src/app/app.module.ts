@@ -9,6 +9,7 @@ import { PhotoFormComponent } from './components/photo-form/photo-form.component
 import { PhotoPreviewComponent } from './components/photo-preview/photo-preview.component';
 import { PhotoListComponent } from './components/photo-list/photo-list.component';
 import { PhotoService } from './services/photo.service';
+import { ImagePhotoPipe } from './pipes/image-photo.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PhotoService } from './services/photo.service';
     PhotoFormComponent,
     PhotoPreviewComponent,
     PhotoListComponent,
+    ImagePhotoPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [PhotoService],

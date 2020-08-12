@@ -6,10 +6,16 @@
     <div class="card-body">
       <form>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Titulo de la foto" #title required />
+
+          <input type="text" class="form-control" name="title" placeholder="Titulo de la foto" #title required />
         </div>
+
         <div class="form-group">
-          <textarea rows="2" class="form-control" placeholder="Descripción de la foto" #description required></textarea>
+          <textarea rows="2" class="form-control" name="description" placeholder="Descripción de la foto" #description
+            required></textarea>
+        </div>
+        <div class="alert alert-primary" role="alert" [ngClass]="{'d-none':hideAlertFile}">
+          Seleccione una Foto
         </div>
         <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput />
         <img [src]="photoSelected || 'assets/img/no-image.png'" class="img-fluid-2" alt="No image"
